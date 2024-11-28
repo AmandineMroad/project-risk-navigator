@@ -1,6 +1,7 @@
 import { Sidebar } from "../components/Sidebar";
 import { ProcessFlow } from "../components/ProcessFlow";
 import { Share2, Plus, MessageSquare, History } from "lucide-react";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
 const Index = () => {
   return (
@@ -63,10 +64,58 @@ const Index = () => {
                 {/* Ligne de connexion */}
                 <div className="h-8 w-0.5 bg-accent-blue"></div>
                 
-                {/* Task */}
-                <div className="w-full p-4 bg-accent-blue/20 rounded-lg border border-accent-blue">
-                  <h3 className="text-lg font-semibold text-accent-blue">Task Name</h3>
-                </div>
+                {/* Task avec HoverCard */}
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <div className="w-full p-4 bg-accent-blue/20 rounded-lg border border-accent-blue cursor-pointer">
+                      <h3 className="text-lg font-semibold text-accent-blue">Task Name</h3>
+                    </div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80 bg-background border border-border">
+                    <div className="space-y-4">
+                      {/* Responsible */}
+                      <div>
+                        <h4 className="text-sm font-semibold mb-2">Responsible</h4>
+                        <button 
+                          onClick={() => console.log("Navigate to Project Manager profile")}
+                          className="w-full text-left p-2 rounded-lg bg-text-secondary/10 hover:bg-text-secondary/20 transition-colors"
+                        >
+                          Project Manager
+                        </button>
+                      </div>
+                      
+                      {/* Accountable */}
+                      <div>
+                        <h4 className="text-sm font-semibold mb-2">Accountable</h4>
+                        <button 
+                          onClick={() => console.log("Navigate to Project Manager profile")}
+                          className="w-full text-left p-2 rounded-lg bg-text-secondary/10 hover:bg-text-secondary/20 transition-colors"
+                        >
+                          Project Manager
+                        </button>
+                      </div>
+                      
+                      {/* Supporting */}
+                      <div>
+                        <h4 className="text-sm font-semibold mb-2">Supporting</h4>
+                        <div className="space-y-2">
+                          <button 
+                            onClick={() => console.log("Navigate to Project Team profile")}
+                            className="w-full text-left p-2 rounded-lg bg-text-secondary/10 hover:bg-text-secondary/20 transition-colors"
+                          >
+                            Project Team
+                          </button>
+                          <button 
+                            onClick={() => console.log("Navigate to Risk Management Facilitator profile")}
+                            className="w-full text-left p-2 rounded-lg bg-text-secondary/10 hover:bg-text-secondary/20 transition-colors"
+                          >
+                            Project Risk Management Facilitator
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
                 
                 {/* Ligne de connexion */}
                 <div className="h-8 w-0.5 bg-accent-blue"></div>
