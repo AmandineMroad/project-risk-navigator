@@ -10,11 +10,11 @@
 
 @layer components {
   .process-step {
-    @apply p-3 rounded-lg bg-text-secondary/20 flex items-center gap-2;
+    @apply p-3 rounded-full bg-text-secondary/20 flex items-center gap-2 transition-colors duration-200;
   }
   
   .process-connector {
-    @apply w-0.5 h-8 bg-text-secondary/20 mx-auto;
+    @apply w-0.5 h-6 bg-text-secondary/20 mx-auto;
   }
   
   .asset-button {
