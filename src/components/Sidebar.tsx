@@ -1,10 +1,10 @@
-import { BarChart2, FolderTree, Layout, Timeline } from "lucide-react";
+import { BarChart2, FolderTree, Layout, ListOrdered } from "lucide-react";
 
 const navItems = [
   { icon: Layout, label: "Projects" },
   { icon: FolderTree, label: "Breakdown Structures" },
   { icon: BarChart2, label: "Process" },
-  { icon: Timeline, label: "Timeline" },
+  { icon: ListOrdered, label: "Timeline" },
 ];
 
 export const Sidebar = () => {
