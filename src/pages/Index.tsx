@@ -1,44 +1,88 @@
 import { Sidebar } from "../components/Sidebar";
-import { TopBar } from "../components/TopBar";
 import { ProcessFlow } from "../components/ProcessFlow";
-import { AssetsList } from "../components/AssetsList";
+import { Share2, Plus, MessageSquare, History } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-background">
       <Sidebar />
       <div className="flex-1">
-        <TopBar />
+        <div className="p-6 border-b border-border">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-4">
+              <h1 className="text-2xl font-bold">Identify Risks</h1>
+              <div className="flex items-center gap-2 text-sm text-text-secondary">
+                <span>Process Owner</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-accent-blue/20" />
+                  <span>HILDESINAR Fanny</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-text-secondary/20 text-sm">
+                <Plus size={16} />
+                <span>ADD TO FAVOURITES</span>
+              </button>
+              <button className="p-2 rounded-lg border border-text-secondary/20">
+                <Share2 size={16} />
+              </button>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent-blue/20 text-accent-blue">
+              <MessageSquare size={16} />
+              <span>Explain</span>
+            </button>
+            <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-text-secondary/10">
+              <span>Similar in ESA</span>
+            </button>
+            <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-text-secondary/10">
+              <MessageSquare size={16} />
+              <span>Discuss</span>
+            </button>
+            <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-text-secondary/10">
+              <History size={16} />
+              <span>Updates</span>
+            </button>
+          </div>
+        </div>
         <div className="p-8 grid grid-cols-12 gap-8">
           <div className="col-span-3">
             <ProcessFlow />
           </div>
           <div className="col-span-6 space-y-8">
             <div className="p-6 rounded-lg bg-text-secondary/5 border border-border">
-              <h2 className="text-xl font-bold mb-4">Identify Risks</h2>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="text-sm text-text-secondary">Process Owner</span>
-                <span>DUPONT Jean</span>
-              </div>
-              <div className="flex gap-4">
-                <button className="px-4 py-2 rounded-lg bg-accent-blue/20 text-accent-blue">
-                  Explain
-                </button>
-                <button className="px-4 py-2 rounded-lg bg-text-secondary/10">Similar in ESA</button>
-                <button className="px-4 py-2 rounded-lg bg-text-secondary/10">Discuss</button>
-                <button className="px-4 py-2 rounded-lg bg-text-secondary/10">Updates</button>
-              </div>
+              <h3 className="text-lg font-semibold mb-4">Input A</h3>
+              <p className="text-text-secondary">
+                Lorem ipsum dolor sit amet consectetur. Pulvinar lacus facilisis et ac et tellus nibh enim. Sed pellentesque augue orci viverra. Et lacus porttitor quam neque. Metus diam lacus erat proin.
+              </p>
             </div>
             <div className="p-6 rounded-lg bg-text-secondary/5 border border-border">
               <h3 className="text-lg font-semibold mb-4">Purpose</h3>
               <p className="text-text-secondary">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent iaculis pharetra
-                turpis. Nullam porta orci non semper volutpat.
+                Lorem ipsum dolor sit amet consectetur. In dignissim risus sed non lectus tortor elit. Risus porta adipiscing posuere tincidunt feugiat. Nisl a nibh cursus a. Ut scelerisque amet est sed ultrices tristique diam tellus tempor. Sed mauris at porta interdum lacus. Lobortium nam velit. Feugiat purus amet ut rutrum quam. Lectus nulla mi tempus tellus libero. Egestas eleifend consectetur ornare et sagittis suspendisse. Consectetur purus placerat purus a odio nisl amet ut.
               </p>
             </div>
           </div>
           <div className="col-span-3">
-            <AssetsList />
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Assets</h3>
+              <div className="space-y-2">
+                <button className="asset-button w-full">
+                  <span>ERBS</span>
+                  <span>→</span>
+                </button>
+                <button className="asset-button w-full">
+                  <span>Risk management template</span>
+                  <span className="text-accent-blue">UPDATED →</span>
+                </button>
+                <button className="asset-button w-full">
+                  <span>[other template] - [Resource type]</span>
+                  <span>→</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
