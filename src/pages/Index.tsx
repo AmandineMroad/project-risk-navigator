@@ -52,12 +52,32 @@ const Index = () => {
             <ProcessFlow />
           </div>
           <div className="col-span-6 space-y-8">
-            <div className="p-6 rounded-lg bg-text-secondary/5 border border-border">
-              <h3 className="text-lg font-semibold mb-4">Input A</h3>
-              <p className="text-text-secondary">
-                Lorem ipsum dolor sit amet consectetur. Pulvinar lacus facilisis et ac et tellus nibh enim. Sed pellentesque augue orci viverra. Et lacus porttitor quam neque. Metus diam lacus erat proin.
-              </p>
+            {/* Diagramme de séquence */}
+            <div className="relative p-6 rounded-lg bg-text-secondary/5 border border-border">
+              <div className="flex flex-col items-center space-y-4">
+                {/* Input A */}
+                <div className="w-full p-4 bg-text-secondary/10 rounded-lg border border-border">
+                  <h3 className="text-lg font-semibold">Input A</h3>
+                </div>
+                
+                {/* Ligne de connexion */}
+                <div className="h-8 w-0.5 bg-accent-blue"></div>
+                
+                {/* Task */}
+                <div className="w-full p-4 bg-accent-blue/20 rounded-lg border border-accent-blue">
+                  <h3 className="text-lg font-semibold text-accent-blue">Task Name</h3>
+                </div>
+                
+                {/* Ligne de connexion */}
+                <div className="h-8 w-0.5 bg-accent-blue"></div>
+                
+                {/* ERiS */}
+                <div className="w-3/4 p-4 bg-text-secondary/10 rounded-lg border border-border">
+                  <h3 className="text-lg font-semibold text-center">ERiS</h3>
+                </div>
+              </div>
             </div>
+
             <div className="p-6 rounded-lg bg-text-secondary/5 border border-border">
               <h3 className="text-lg font-semibold mb-4">Purpose</h3>
               <p className="text-text-secondary">
