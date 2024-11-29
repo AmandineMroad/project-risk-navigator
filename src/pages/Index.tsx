@@ -62,13 +62,13 @@ const Index = () => {
                 </div>
                 
                 {/* Ligne de connexion */}
-                <div className="h-8 w-0.5 bg-accent-blue"></div>
+                <div className="h-8 w-0.5 bg-accent-green"></div>
                 
                 {/* Task avec HoverCard */}
                 <HoverCard>
                   <HoverCardTrigger asChild>
-                    <div className="w-full p-4 bg-accent-blue/20 rounded-lg border border-accent-blue cursor-pointer">
-                      <h3 className="text-lg font-semibold text-accent-blue">Task Name</h3>
+                    <div className="w-full p-4 bg-accent-green/20 rounded-lg border border-accent-green cursor-pointer">
+                      <h3 className="text-lg font-semibold text-accent-green">Task Name</h3>
                     </div>
                   </HoverCardTrigger>
                   <HoverCardContent className="w-80 bg-background border border-border">
@@ -118,7 +118,7 @@ const Index = () => {
                 </HoverCard>
                 
                 {/* Ligne de connexion */}
-                <div className="h-8 w-0.5 bg-accent-blue"></div>
+                <div className="h-8 w-0.5 bg-accent-green"></div>
                 
                 {/* ERiS */}
                 <div className="w-3/4 p-4 bg-text-secondary/10 rounded-lg border border-border">
